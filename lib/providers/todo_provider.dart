@@ -30,8 +30,8 @@ class TodoProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  void addTodo(String title) {
-    final todo = Todo(title: title);
+  void addTodo(String title, DateTime? dueDate) {
+    final todo = Todo(title: title, dueDate: dueDate);
     _todoBox.add(todo);
     notifyListeners();
   }
