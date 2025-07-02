@@ -7,13 +7,15 @@ class TodoTile extends StatelessWidget {
   final bool isDone;
   final int index;
   final DateTime? dueDate;
+  final String category;
 
   const TodoTile({
+    super.key,
     required this.title,
     required this.isDone,
     required this.index,
     this.dueDate,
-    super.key,
+    this.category = 'General',
   });
 
   @override
